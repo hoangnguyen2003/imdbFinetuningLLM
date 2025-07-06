@@ -1,22 +1,18 @@
 model:
-  name: "distilgpt2"
+  name: 'distilgpt2'
   max_length: 128
 
 dataset:
-  name: "imdb"
-  split: "train[:1%]"
+  name: 'imdb'
+  split: 'train[:10%]'
   train_ratio: 0.8
 
 training:
-  output_dir: "./results"
-  evaluation_strategy: "epoch"
-  per_device_train_batch_size: 4
-  per_device_eval_batch_size: 4
-  num_train_epochs: 1
-  logging_dir: "./logs"
-  logging_steps: 10
-  save_total_limit: 1
-  model_path: "./results/fine_tuned_model"
+  output_dir: './results'
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  num_train_epochs: 20
+  model_path: './results/fine_tuned_model'
 
 generation:
-  max_length: 15
+  max_length: 50
