@@ -23,7 +23,7 @@ def main(args):
         train_and_save(config['training']['model_path'], tokenizer, model, trainer)
     else:
         generated_text = generate_text(args.prompt,
-                                       config['generation']['max_length'],
+                                       args.max_length,
                                        config['training']['model_path'])
         print(generated_text)
 
@@ -41,6 +41,12 @@ if __name__ == '__main__':
         '--prompt',
         type=str, 
         help='Text prompt for generation mode'
+    )
+    parser.add_argument(
+        '--max_length',
+        type=int,
+        help='Maximum length of the sequence to be generated',
+        default=104
     )
 
     main(parser.parse_args())
