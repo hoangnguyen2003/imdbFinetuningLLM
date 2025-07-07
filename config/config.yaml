@@ -4,15 +4,12 @@ model:
 
 dataset:
   name: 'imdb'
-  split: 'train[:10%]'
+  split: 'train[:3%]'
   train_ratio: 0.8
 
 training:
   output_dir: './results'
   per_device_train_batch_size: 8
   per_device_eval_batch_size: 8
-  num_train_epochs: 20
+  num_train_epochs: 60
   model_path: './results/fine_tuned_model'
-
-generation:
-  max_length: 50
