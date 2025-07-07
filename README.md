@@ -60,6 +60,8 @@ conda activate imdbFinetuningLLM
 python main.py --mode train
 ```
 
+To use my fine-tuned model, download [fine_tuned_model](https://drive.google.com/drive/folders/1DX9Dac8TVnqFVXmjgL1PJYgdP6iA6lA4?usp=sharing), extract it if necessary, and place the `fine_tuned_model` folder inside the `results` directory (create the folder in `imdbFinetuningLLM` if it doesn't exist).
+
 You can generate text directly from the command line:
 
 ```bash
